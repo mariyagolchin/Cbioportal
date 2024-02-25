@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> 
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">   
+    <link rel="stylesheet" href="{% static 'css/flex-layout.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/tabs.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/cards.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Cbioportal Databased</h1>
+        <nav> 
+            <ul>
+                <li><a href="{% url 'index' %}"><i class="fa fa-address-book"></i> Home</a></li>
+                <li><a href="about.html"> <i class="fa fa-user-circle"></i> About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Dataset</a></li>
+                <li><a href="search.html">News</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block maincontent %}
+        {% endblock %}
+    </main>
+
+    
+    
+    <footer class="flex-container">
+        <div class="flex-item-25">
+            <h3>Tehran university</h3>
+            <img class="image-size-small" src="{% static 'images/tehran_university.png' %}" alt="tehran university">
+
+        </div>
+        <div class="flex-item-25">
+            <h3>Cancer</h3>
+            <img class="rounded-image" src="{% static 'images/cancer1.jpg' %}" alt="tehran university">
+
+        </div>
+        <div class="flex-item-25">
+            <h3>News</h3>
+            <img class="rounded-image" src="{% static 'images/cancer2.jpg' %}" alt="tehran university">
+        </div>
+        <div class="flex-item-25">
+            <h3>Drugs</h3>
+            <img class="rounded-image" src="{% static 'images/drug.jpg' %}" alt="tehran university">
+        </div>
+
+    </footer>
+</body>
+<script>
+    document.getElementById("defaultOpen").click();
+</script>
+</html> 
